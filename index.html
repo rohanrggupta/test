@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zorblax Quixotron</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --card: #f4f4f4;
+      --hover: #e0e0e0;
+      --btn-bg: #2563eb;
+      --btn-text: #ffffff;
+    }
+
+    body.dark {
+      --bg: #0f0f0f;
+      --text: #f0f0f0;
+      --card: #1f1f1f;
+      --hover: #2a2a2a;
+      --btn-bg: #3b82f6;
+      --btn-text: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: 0.3s;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--card);
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .toggle-btn {
+      padding: 0.5rem 1rem;
+      background-color: var(--hover);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border: 1px solid rgba(60, 60, 60, 0.20);
+      border-radius: 14px;
+      padding: 2rem;
+      background: var(--bg);
+      box-sizing: border-box;
+    }
+
+    .hero-content {
+      max-width: 500px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero p {
+      color: gray;
+      margin-top: 0.5rem;
+    }
+
+    .btn {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--btn-bg);
+      color: var(--btn-text);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .section-title {
+      margin-top: 3rem;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--card);
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .card:hover {
+      background-color: var(--hover);
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      background-color: var(--card);
+      color: var(--text);
+      border: none;
+      border-radius: 6px;
+    }
+
+    .hero-img {
+      width: 400px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Zorblax Quixotron</h2>
+    <nav>
+      <a href="#features">Blarg</a>
+      <a href="#industries">Snorft</a>
+      <a href="#pricing">Flarn</a>
+      <a href="#contact">Wizzle</a>
+    </nav>
+    <button class="toggle-btn" onclick="toggleTheme()">Dark Mode</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Blibbyflop for Nargleflux</h1>
+        <p>Squibble your plornak with automated shmoogle efficiency.</p>
+        <button class="btn">Request Flarnox</button>
+      </div>
+      <img src="https://www.repeato.app/wp-content/uploads/2024/06/AI-computer-vision-automation.jpg" alt="Zibble Illustration" class="hero-img" />
+    </section>
+
+    <h2 class="section-title" id="features">Frizzlop Blings</h2>
+    <section class="grid">
+      <div class="card">
+        <h3>ZorpShield</h3>
+        <p>Keep your glonks safe in the schmorble vault.</p>
+      </div>
+      <div class="card">
+        <h3>Snizzle LLMs</h3>
+        <p>Programmed for your flibberty workflows and gibberish jargon.</p>
+      </div>
+      <div class="card">
+        <h3>Rapid Floopment</h3>
+        <p>Activate in 7 zonks or less!</p>
+      </div>
+    </section>
+
+    <h2 class="section-title" id="industries">Blarps We Snizzle</h2>
+    <section class="grid">
+      <div class="card">Glibb Lawz</div>
+      <div class="card">Clinicorps</div>
+      <div class="card">E-Flarn</div>
+      <div class="card">H.R. Squads</div>
+      <div class="card">Edufizz</div>
+      <div class="card">Snaccountants</div>
+    </section>
+
+    <h2 class="section-title" id="pricing">Flarnobox Plans</h2>
+    <section class="grid">
+      <div class="card">
+        <h3>Fizzlet</h3>
+        <p>$49/zonk</p>
+        <p>Basic shmoogle and web glarp</p>
+      </div>
+      <div class="card">
+        <h3>Zorpo</h3>
+        <p>$199/zonk</p>
+        <p>Includes Slackle & advanced plurn</p>
+      </div>
+      <div class="card">
+        <h3>Extraglop</h3>
+        <p>Request Nizzle</p>
+        <p>Self-hosted gloops with gobble knobs</p>
+      </div>
+    </section>
+
+    <h2 class="section-title" id="contact">Snarggle Us</h2>
+    <form>
+      <input type="text" placeholder="Zibble Name" required />
+      <input type="email" placeholder="Zibble Email" required />
+      <textarea placeholder="Type your Glibber here..." rows="4"></textarea>
+      <button type="submit" class="btn">Send Zibble</button>
+    </form>
+  </main>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      const btn = document.querySelector('.toggle-btn');
+      btn.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+    }
+  </script>
+</body>
+</html>
